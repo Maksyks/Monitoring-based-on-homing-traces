@@ -8,7 +8,7 @@
 #include "ws2tcpip.h"
 #include <WS2tcpip.h>
 #include "Function.h"
-// POP3Server.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+// POP3Server.cpp : ГќГІГ®ГІ ГґГ Г©Г« Г±Г®Г¤ГҐГ°Г¦ГЁГІ ГґГіГ­ГЄГ¶ГЁГѕ "main". Г‡Г¤ГҐГ±Гј Г­Г Г·ГЁГ­Г ГҐГІГ±Гї ГЁ Г§Г ГЄГ Г­Г·ГЁГўГ ГҐГІГ±Гї ГўГ»ГЇГ®Г«Г­ГҐГ­ГЁГҐ ГЇГ°Г®ГЈГ°Г Г¬Г¬Г».
 
 
 #pragma comment(lib, "wsock32.lib")
@@ -293,7 +293,7 @@ int main()
 					int h = 0;
 					for (int p = 0; list[p] != 0; p++)
 						h++;
-					if (k < h) {//должно быть +OK специально изменил
+					if (k < h) {//РЎРїРµС†РёР°Р»СЊРЅРѕ РґРѕРїСѓС‰РµРЅР° РѕС€РёР±РєР°, РґРѕР»Р¶РµРЅ РѕС‚РїСЂР°РІР»СЏС‚СЊ +OK
 						c_mess = "-ERR" + to_string(list[k]) + " octets" + "\r\n" + RETR(login, k) + ".\r\n";
 						result = send(clientSocket, c_mess.c_str(), c_mess.size() + 1, 0);
 					}
